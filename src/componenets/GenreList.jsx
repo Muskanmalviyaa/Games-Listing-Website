@@ -15,8 +15,8 @@ function GenreList({genreId, selectedGenresName}) {
     });
   };
   return (
-    <div>
-      <h2 className="text-[30px] font-bold dark:text-white">Genre</h2>
+    <div className="z-10 dark:bg-black">
+      <h2 className="text-[30px] font-bold  dark:text-white">Genre</h2>
       {genreList.map((item, index) => (
         <div
           key={item.id}
