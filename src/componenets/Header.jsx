@@ -55,7 +55,8 @@ function Header() {
           className="text-[30px] bg-slate-200 text-black rounded-full p-1 cursor-pointer lg:hidden md:hidden sm:block"
         />
       </div>
-
+       
+       
       {/* Genre List Popup */}
       <div
         className={`absolute top-14 left-0 w-full bg-white shadow-md rounded-lg p-4 z-10 transition-all duration-300 ease-in-out ${
