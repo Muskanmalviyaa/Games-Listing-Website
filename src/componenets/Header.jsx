@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <div className="flex items-center p-4 space-x-4 overflow-hidden relative">
+    <div className="flex items-center p-4 space-x-4 relative">
       {/* Logo */}
       <img src={logo} width={50} height={50} className="shrink-0" />
 
@@ -59,23 +59,21 @@ function Header() {
        
       {/* Genre List Popup */}
       <div
-        className={`absolute top-14 left-0 w-full bg-white shadow-md rounded-lg p-4 z-10 transition-all duration-300 ease-in-out ${
-          isGenreListVisible
-            ? "max-h-96 opacity-100 visible"
-            : "max-h-0 opacity-0 invisible"
-        }`}
-        style={{
-          transition: "max-height 0.3s ease-in-out, opacity 0.3s ease-in-out",
-        }}
-      >
-        {/* Display Genre List if visible */}
-        {isGenreListVisible && (
-          <GenreList
-            genreId={(id) => console.log(`Selected Genre ID: ${id}`)}  // Callback for genre ID
-            selectedGenresName={(name) => console.log(`Selected Genre Name: ${name}`)}  // Callback for genre name
-          />
-        )}
-      </div>
+  className={`absolute top-14 left-1/2 px-2 transform-translate-x-1/2 w-11/12 max-w-sm bg-gray-300 dark:bg-black shadow-md rounded-lg z-50 transition-all duration-300 ease-in-out min-h-[150px] max-h-[60vh] overflow-y-auto ${
+    isGenreListVisible
+      ? "opacity-100 scale-95"
+      : "opacity-0 scale-95 pointer-events-none"
+  }`}
+>
+  {/* Display Genre List if visible */}
+  {isGenreListVisible && (
+    <GenreList
+      genreId={(id) => console.log(`Selected Genre ID: ${id}`)} // Callback for genre ID
+      selectedGenresName={(name) => console.log(`Selected Genre Name: ${name}`)} // Callback for genre name
+    />
+  )}
+</div>
+
     </div>
   );
 }
