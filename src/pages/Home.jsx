@@ -82,7 +82,7 @@ function Home() {
   };
 
   return (
-    <div className="grid grid-cols-4 px-6 p-3 gap-4">
+    <div className="grid grid-cols-4 px-6 p-3 gap-4 ">
       <div className="hidden md:block mr-4">
         <GenreList
           genreId={getGameListByGenreId} // Pass down the fetch function

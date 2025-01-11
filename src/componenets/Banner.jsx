@@ -12,7 +12,7 @@ function Banner({ gameBanner }) {
       </div>
       <img
         src={gameBanner.background_image}
-        className="w-full object-cover rounded-lg lg:h-[540px] md:min-h-[320px]"  //Work on it......
+        className="w-full object-cover rounded-lg lg:h-[540px] md:min-h-[320px]"  
       />
     </div>
   );
